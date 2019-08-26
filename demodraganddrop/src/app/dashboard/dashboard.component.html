@@ -1,0 +1,29 @@
+
+    <div class="row">
+      <div class="col-3" style="border: 1px">
+        <div class="row">
+            <button (click)="showBasicFunction()">Basic Drag And Drop</button>
+        </div>
+        <div class="row">
+            <button>Reordering List</button>
+        </div>
+        <div class="row">
+          <button>Attaching Data</button>
+        </div>
+        <div class="row">
+            <button>Customizing the drag area using a handle</button>
+        </div>
+        <div class="row">
+            <button>Customizing the drag preview</button>
+        </div>
+        <div class="row">
+            <button>Customizing the drag placeholder</button>
+        </div>
+     
+      </div>
+      <div class="col-9" style="border: 1px">
+        <div *ngIf="showBasic">
+          <app-basic-drag-and-drop></app-basic-drag-and-drop>
+        </div>
+      </div>
+    </div>
