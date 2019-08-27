@@ -2,10 +2,16 @@
     <div class="row">
       <div class="col-3" style="border: 1px">
         <div class="row">
-            <button (click)="showBasicFunction()">Basic Drag And Drop</button>
+            <button  (click)="showBasicFunction()" mat-raised-button>Basic Drag And Drop</button>
         </div>
         <div class="row">
             <button (click)="showReorderingFunction()">Reordering List</button>
+        </div>
+        <div class="row">
+          <button (click)="showTransferringBetweenTwoListFunction()">Transferring Between Two List</button>
+        </div>
+        <div class="row">
+          <button (click)="showTransferringBetweenTwoListCustomizedFunction()">Transferring Between Two List Customized</button>
         </div>
         <div class="row">
           <button (click)="showAttachingDataFunction()">Attaching Data</button>
@@ -19,11 +25,21 @@
         <div class="row">
             <button (click)="showDragAndDropCustomizedPlaceHolderFunction()">Customizing the drag placeholder</button>
         </div>
-     
+
       </div>
       <div class="col-9" style="border: 1px">
         <div *ngIf="showBasic">
           <app-basic-drag-and-drop></app-basic-drag-and-drop>
+        </div>
+
+        <div *ngIf="showReordering">
+          <app-reorderinglist></app-reorderinglist>
+        </div>
+        <div *ngIf="showTransferringBetweenTwoList">
+          <app-transferringitembetweenlist></app-transferringitembetweenlist>
+        </div>
+        <div *ngIf="showTransferringBetweenTwoListCustomized">
+          <app-transferringitembetweenlistcustomized></app-transferringitembetweenlistcustomized>
         </div>
       </div>
     </div>

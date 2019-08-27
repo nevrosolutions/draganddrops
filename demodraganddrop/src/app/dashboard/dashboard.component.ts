@@ -6,40 +6,57 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-private showBasic:boolean=false;
-private showReordering:boolean=false;
-private showAttachingData:boolean=false;
-private showDragAndDropUsingHandlers:boolean=false;
-private showDragAndDropPreview:boolean=false;
-private showDragAndDropCustomizedPlaceHolder:boolean=false;
+  private showBasic = false;
+  private showReordering = false;
+  private showAttachingData = false;
+  private showTransferringBetweenTwoList = false;
+  private showDragAndDropUsingHandlers = false;
+  private showDragAndDropPreview = false;
+  private showDragAndDropCustomizedPlaceHolder = false;
+  private showTransferringBetweenTwoListCustomized = false;
 
   constructor() { }
 
   ngOnInit() {
+
   }
-private showBasicFunction(){
-this.flag(false);
-this.showBasic=true;
-}
-private showReorderingFunction(){
+
+  private showBasicFunction() {
+    this.flag(false);
+    this.showBasic = true;
+  }
+
+  private showReorderingFunction() {
+    this.flag(false);
+    this.showReordering = true;
+  }
+
+  private showAttachingDataFunction() {
+    this.flag(false);
+    this.showAttachingData = true;
+  }
+
+  private showDragAndDropUsingHandlersFunction() {
+    this.flag(false);
+    this.showDragAndDropUsingHandlers = true;
+  }
+
+  private showTransferringBetweenTwoListFunction() {
+    this.flag(false);
+    this.showTransferringBetweenTwoList = true;
+  }
+private  showTransferringBetweenTwoListCustomizedFunction() {
   this.flag(false);
-this.showReordering=true;
+  this.showTransferringBetweenTwoListCustomized = true;
 }
-private showAttachingDataFunction(){
-  this.flag(false);
-this.showAttachingData=true;
-}
-private showDragAndDropUsingHandlersFunction(){
-  this.flag(false);
-this.showDragAndDropUsingHandlers=true;
-}
-private showDragAndDropPreviewFunction(){
-  this.flag(false);
-this.showDragAndDropPreview=true;
-}
-private showDragAndDropCustomizedPlaceHolderFunction(){
-  this.flag(false);
-  this.showDragAndDropCustomizedPlaceHolder=true;
+  private showDragAndDropPreviewFunction() {
+    this.flag(false);
+    this.showDragAndDropPreview = true;
+  }
+
+  private showDragAndDropCustomizedPlaceHolderFunction() {
+    this.flag(false);
+    this.showDragAndDropCustomizedPlaceHolder = true;
   }
 
   private flag(flag: boolean) {
@@ -49,5 +66,7 @@ private showDragAndDropCustomizedPlaceHolderFunction(){
     this.showDragAndDropUsingHandlers = flag;
     this.showDragAndDropPreview = flag;
     this.showDragAndDropCustomizedPlaceHolder = flag;
+    this.showTransferringBetweenTwoList = flag;
+    this.showTransferringBetweenTwoListCustomized = flag;
   }
 }

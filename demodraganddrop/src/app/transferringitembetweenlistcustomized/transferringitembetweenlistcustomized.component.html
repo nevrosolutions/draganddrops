@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-2">
+    <div class="example-container">
+      <h2>Designation</h2>
+
+      <div
+        cdkDropList
+        [cdkDropListData]="designations"
+        [cdkDropListConnectedTo]="[workspace]"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of designations" cdkDrag>{{item.label}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="example-container">
+      <h2>Workspace</h2>
+      <div class="row">
+        <div
+          cdkDropList
+          [cdkDropListData]="workspaceList"
+          #workspace="cdkDropList"
+          class="example-list col-6"
+          (cdkDropListDropped)="dropDesignation($event)">
+          <div class="example-box " *ngFor="let item of workspaceList " cdkDrag>{{item.label}}
+            <mat-icon aria-hidden="false" aria-label="Example delete icon" (click)="deleteDesignation(item)">delete</mat-icon>
+          </div>
+        </div>
+        <div cdkDropList
+             [cdkDropListData]="categoryList"
+             #category ="cdkDropList"
+             class="example-list  col-6"
+             style="width: 100px"
+             (cdkDropListDropped)="dropCategory($event)">
+           <div class="example-box " *ngFor="let item of categoryList " cdkDrag >
+             <p id="bg-text">{{ item.label }}</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-2">
+    <div class="example-container">
+      <h2>Agent Category</h2>
+
+      <div
+        (cdkDropListDropped)="drop($event)"
+        [cdkDropListConnectedTo]="[category]"
+        [cdkDropListData]="categorys"
+        cdkDropList
+        class="example-list">
+        <div class="example-box" *ngFor="let item of categorys" cdkDrag>{{item.label}}</div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
