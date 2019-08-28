@@ -8,6 +8,15 @@
   display: block;
 }
 
+.workspace-list {
+  border: solid 1px #ccc;
+  min-height: 160px;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+}
+
 .example-box {
   padding: 20px 10px;
   border-bottom: solid 1px #ccc;

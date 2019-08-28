@@ -3,4 +3,5 @@ export class Category {
   code: string;
   label: string;
   hierarchyWithingCategory: string;
+  isCategory = true;
 }
